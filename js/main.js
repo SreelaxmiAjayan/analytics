@@ -2,6 +2,9 @@ import headerFunc from "./header.js"
 import productFunc from "./product.js"
 import searchFunc from "./search.js"
 
+//! Global Product Data
+window.productsData = []; // Initialize globally////////////////
+
 //! add product to localstorage start
 
 (async function () {
@@ -23,7 +26,7 @@ import searchFunc from "./search.js"
     searchFunc(data)
 
 }
-)()
+)() ///////////////////
 
 //! add product to localstorage end
 
