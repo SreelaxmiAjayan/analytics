@@ -9,6 +9,14 @@ import searchFunc from "./search.js"
     const products = await fetch("js/data.json") //get data
     const data = await products.json() // to json
 
+    
+     //  Add This Code Here
+    if (data) {
+        window.productsData = data; // Storing the data globally
+        console.log("Product Data Loaded:", window.productsData);
+    }
+
+    
 
     data ? localStorage.setItem("products", JSON.stringify(data)) : [] // json to string
     productFunc(data)
