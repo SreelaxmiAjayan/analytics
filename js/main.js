@@ -2,8 +2,6 @@ import headerFunc from "./header.js"
 import productFunc from "./product.js"
 import searchFunc from "./search.js"
 
-//! Global Product Data
-window.productsData = []; // Initialize globally////////////////
 
 //! add product to localstorage start
 
@@ -12,12 +10,6 @@ window.productsData = []; // Initialize globally////////////////
     const products = await fetch("js/data.json") //get data
     const data = await products.json() // to json
 
-    
-     //  Add This Code Here
-    if (data) {
-        window.productsData = data; // Storing the data globally
-        console.log("Product Data Loaded:", window.productsData);
-    }
 
     
 
@@ -26,7 +18,7 @@ window.productsData = []; // Initialize globally////////////////
     searchFunc(data)
 
 }
-)() ///////////////////
+)() 
 
 //! add product to localstorage end
 
